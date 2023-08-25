@@ -8,12 +8,12 @@ const EventBooking = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className='event-booking-container'>
         <LinkSection />
         <Banner />
         <VideoBanner />
         <div className='mt-5'></div>
-    </>
+    </div>
   )
 }
 

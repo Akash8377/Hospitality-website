@@ -42,7 +42,7 @@ const BookAnEvent = () => {
   }, []);
 
   return (
-    <>
+    <div className="book-an-event-container">
       <EventModal
         show={modalShow}
         onHide={() => setModalShow(false)}
@@ -342,7 +342,7 @@ const BookAnEvent = () => {
       </div>
 
       <div className="pt-5"></div>
-    </>
+    </div>
   );
 };
 

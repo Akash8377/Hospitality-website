@@ -10,12 +10,12 @@ const SignIn = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="signin-container">
       <HeadingCont title={"Continue Signing In with"} content={""} />
       <UserSelection />
       <Newsletter />
       <div className="pt-5"></div>
-    </>
+    </div>
   );
 };
 

@@ -29,7 +29,7 @@ const Community = () => {
   }, []);
 
   return (
-    <>
+    <div className="community-container">
       <div className="Community_Page">
         <Banner />
         <ContactForm who={who}/>
@@ -118,7 +118,7 @@ const Community = () => {
         </div>
         <div className="pt-5"></div>
       </div>
-    </>
+    </div>
   );
 };
 

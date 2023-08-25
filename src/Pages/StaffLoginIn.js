@@ -11,7 +11,7 @@ const StaffLoginIn = () => {
   }, []);
 
   return (
-    <>
+    <div className="staff-login-container-main">
       <StaffLoginModal show={modalShow} onHide={() => setModalShow(false)} />
       <div className="Staff-Login-Container">
         <div className="Training_Course">
@@ -69,7 +69,7 @@ const StaffLoginIn = () => {
           
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

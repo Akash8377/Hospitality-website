@@ -658,102 +658,6 @@
 
 /* Footer  */
 
-.Footer {
-  background: #1E2A39;
-  margin-top: 10%;
-  padding-bottom: 50px;
-  
-}
-.Footer .Upper_Div {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  justify-content: space-between;
-  padding-top: 2%;
-  align-items: center;
-}
-.Footer .Upper_Div div {
-  width: 15%;
-}
-.Footer .Upper_Div div p {
-  margin: 0;
-  color: #fff;
-  font-family: Plus Jakarta Sans;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-}
-.Footer .Upper_Div div button {
-  color: #fff;
-  text-align: center;
-  font-family: Plus Jakarta Sans;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 800;
-  border-radius: 8px;
-  background: #005479;
-  border: 1px solid #005479;
-  width: 100%;
-  padding: 10px;
-  line-height: normal;
-}
-.Footer a {
-  text-decoration: none;
-}
-
-.Footer .Down_Div {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: auto;
-  margin-top: 40px;
-}
-
-.Footer .Down_Div .left h5 {
-  color: #fff;
-  font-family: Plus Jakarta Sans;
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 39px;
-}
-.Footer .Down_Div .left .two_sec {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 30px;
-}
-.Footer .Down_Div .left .two_sec p {
-  margin: 0;
-  color: #fff;
-  font-family: Plus Jakarta Sans;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.Footer .Down_Div .left .two_sec i {
-  color: #fff;
-  font-size: 20px;
-}
-
-.Footer .Down_Div .left .copyRight {
-  color: #fff;
-  font-family: Plus Jakarta Sans;
-  font-size: 20px;
-  margin-top: 40px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.Footer .Down_Div .right {
-  width: 30%;
-}
-.Footer .Down_Div .right img {
-  width: 100%;
-}
-
 /* About Us Page */
 .AboutUs {
   min-height: 600px;
@@ -1666,12 +1570,12 @@
 /* Link Section */
 .Link_Section {
   position: fixed;
-  top: 50%;
-  left: 98%;
+  top: 185%;
+  left: 146%;
   transform: translate(-50%, -50%);
   display: flex;
-  gap: 20px;
-  flex-direction: column;
+  gap: 50px;
+  
   z-index: 999;
 }
 

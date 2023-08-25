@@ -10,7 +10,7 @@ const PermanentJob = () => {
   }, []);
 
   return (
-    <>
+    <div className="permanent-job-conatiner">
       {" "}
       <div className="permanent-job">
         <div className="Banner AboutUs">
@@ -277,7 +277,7 @@ const PermanentJob = () => {
 
         <div className="pt-5"></div>
       </div>
-    </>
+    </div>
   );
 };
 

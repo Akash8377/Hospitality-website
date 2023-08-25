@@ -11,7 +11,7 @@ const FindWork = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="find-work-conatiner">
       <Banner />
       <HeadingCont
         title={"Contact Us"}
@@ -26,7 +26,7 @@ const FindWork = () => {
       />
       <AboutSection />
       <div className="pt-5"></div>
-    </>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
- import { useState, useEffect } from 'react';
- import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 // import { Layout, Menu } from 'antd';
 // import {MobileOutlined,WechatOutlined,UsergroupDeleteOutlined} from '@ant-design/icons';
 // import { FindWorkModal } from "../Modals/FindWorkModal";
@@ -7,17 +7,17 @@
 // import { BoardingModal } from "../Modals/BoardingModal";
 // import { Freelancing } from "../Modals/Freelancing";
 // // import { useAppContext } from '@/context/appContext';
-
+import '../../Css/Navbar.css'
 
 // import {
 
-  
+
 //   CustomerServiceOutlined,
 //   FileTextOutlined,
 //   FileSyncOutlined,
 //   DashboardOutlined,
- 
-  
+
+
 // } from '@ant-design/icons';
 
 // const { Sider } = Layout;
@@ -36,7 +36,7 @@
 //             alt="Logo"
 //             height="116"
 //             width="106"
-             
+
 //           />
 //         </div>
 //         <Menu mode="inline">
@@ -56,39 +56,70 @@
 //             <Link to={'/quote'} />
 //             School For<br/>Bartending
 //           </Menu.Item>
-          
-          
+
+
 //         </Menu>
 //       </Sider>
 //       </div>
 //     </>
 //   );
 // }
-import React from 'react'
+import React from 'react';
+import { FindWorkModal } from "../Modals/FindWorkModal";
+
 
 const Navbar = () => {
-  return (
-    <div>
-    <div>
-    <img src="./Image/9.png" alt=""/>
-    </div>
-    <div>
-    
-    <Link to="/">Find Work</Link>
-    </div>
-    <div>
-    <Link to="/">Find Talented</Link>
-    </div>
-    <div>
-    <Link to="/">Freelancing</Link>
-    </div>
-    <div>
-  
-    <Link to="/">School For Bartending</Link>
-    </div>
-    
-    </div>
-  )
-}
+  const [modalShow, setModalShow] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false); // State to control overlay visibility
 
-export default Navbar
+  const openOverlay = () => {
+    setShowOverlay(true);
+  };
+  return (
+    
+    
+    <div className='main-navi'>
+      <div className='logo-container-main-navi'>
+        <img src="./Image/9.png" alt="" />
+      </div>
+      <div>
+      <Link to="/">
+        <button className='nav-button' onClick={() => setModalShow(true)}>
+          <div>
+          <img src="./Image/108.png" alt="" />
+          </div>
+          <div>
+          Find Work
+          </div>
+        </button>
+      </Link>
+      </div>
+      <div>
+      
+        <button className='nav-button' onClick={openOverlay}>
+          <img src="./Image/110.png" alt="" />
+          Find Talented
+        </button>
+      
+      </div>
+      <div>
+      <Link to="/">
+        <button className='nav-button' onClick={openOverlay}>
+          <img src="./Image/109.png" alt="" />
+          Freelancing
+        </button>
+      </Link>
+      </div>
+      <div>
+      <Link to="/">
+        <button className='nav-button' onClick={openOverlay}>
+          <img src="./Image/111.png" alt="" />
+          School For<br/> Bartending
+        </button>
+      </Link>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

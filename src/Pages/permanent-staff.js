@@ -10,6 +10,7 @@ const PermanentStaff = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
+    <div className="permanent-staff-conatiner">
     <div className="casual-staff Permanent-staff">
       <div className="Banner">
         <div className="content">
@@ -265,6 +266,7 @@ const PermanentStaff = () => {
       </div>
 
       <div className="pt-5"></div>
+    </div>
     </div>
   );
 };

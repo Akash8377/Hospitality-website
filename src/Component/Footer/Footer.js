@@ -1,6 +1,7 @@
-/** @format */
+
 
 import React from "react";
+import './Footer.css'
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -10,51 +11,57 @@ const Footer = () => {
         <div>
           <img src="./Image/9.png" alt="" />
         </div>
-        
-        <div>
-          <Link to="/">
+        {/* <Link to="/">
             <p>HOME</p>
-          </Link>
-        </div>
-        <div>
-          <Link to="/about-us">
-            <p>ABOUT US</p>
-          </Link>
-        </div>
-        <div>
-          <Link to="/event-booking">
-            <p>EVENT BOOKING</p>
-          </Link>
-        </div>
-        <div>
-          <Link to="/contact-us">
-            <button>CONTACT US</button>
-          </Link>
+          </Link> */}
+        <div className="upper-div-1-1">
+          <div>
+
+            <p></p>
+
+          </div>
+          <div>
+
+            <p>HOME</p>
+
+          </div>
+          <div>
+
+            <p>About</p>
+
+          </div>
+          <div>
+
+            <p>Follow Us</p>
+
+          </div>
         </div>
       </div>
 
-      <div className="Down_Div">
-        <div className="left">
-          <h5><div>
-        Lorem ipsum dolor sit amet,<br/> consectetur adipiscing elit, sed do<br/> eiusmod tempor incididunt.
-        </div></h5>
+      <div className="lower_Div-1">
+        <div className="lower-lower-1">
+          <h6><div>
+            Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit, sed do<br /> eiusmod tempor incididunt.
+          </div></h6>
           <div className="two_sec">
             <i className="fa-solid fa-phone"></i>
             <p>+91 9824324456</p>
           </div>
           <div className="two_sec">
             <i className="fa-solid fa-envelope"></i>
-            <p>support@company.com</p>
+            <p>Home</p>
           </div>
           <div className="two_sec">
             <i className="fa-solid fa-location-dot"></i>
-            <p>22nd Avenue Street, UK</p>
+            <p>Our Story </p>
+          </div>
+          <div className="two_sec">
+            <i className="fa-solid fa-location-dot"></i>
+            <p>logo </p>
           </div>
           <p className="copyRight">Copyright reserved ©️ 2023</p>
         </div>
-        <div className="right">
-          <img src="./Image/10.png" alt="" />
-        </div>
+
       </div>
     </div>
   );

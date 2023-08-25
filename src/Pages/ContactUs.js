@@ -11,7 +11,7 @@ const ContactUs = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="contact-us-container">
       <div style={{ backgroundColor: "#eee", height: "100%", width: "100%" }}>
         <LinkSection />
         <Banner />
@@ -101,7 +101,7 @@ const ContactUs = () => {
 
         <div className="pt-5"></div>
       </div>
-    </>
+    </div>
   );
 };
 

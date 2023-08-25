@@ -24,7 +24,7 @@ const AboutUs = () => {
     getAbout();
   }, []);
   return (
-    <>
+    <div className="about-us-container">
       <Banner content={about?.[0]?.title} />
       <LinkSection />
       {about[0]?.desc?.map((ele,i)=>(
@@ -115,7 +115,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="pt-5"></div>
-    </>
+    </div>
   );
 };
 

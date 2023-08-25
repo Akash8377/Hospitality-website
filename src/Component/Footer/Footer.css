@@ -1,0 +1,101 @@
+
+.Footer {
+    background: #a0aabe;
+    margin-top: 10%;
+    padding-bottom: 50px;
+    
+  }
+  .Footer .Upper_Div {
+    display: flex;
+    width: 90%;
+    margin: auto;
+  
+    padding-top: 2%;
+    align-items: center;
+  }
+  .Footer .Upper_Div div {
+    width: 15%;
+  }
+  .Footer .Upper_Div div p {
+    margin: 0;
+    color: #fff;
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    padding:20%;
+    line-height: normal;
+  }
+  .upper-div-1-1{
+    margin-left: 20%;
+    display: flex;
+    
+    gap:100%
+    
+  }
+  .Footer .Upper_Div div button {
+    color: #fff;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    border-radius: 8px;
+    background: #005479;
+    border: 1px solid #005479;
+    width: 100%;
+    padding: 10px;
+    line-height: normal;
+  }
+  .Footer a {
+    text-decoration: none;
+  }
+  
+
+  
+  .Footer .Down_Div .left h5 {
+    color: #fff;
+    font-family: Plus Jakarta Sans;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 39px;
+  }
+
+  .Footer .Down_Div .left .two_sec p {
+    margin: 0;
+    color: #fff;
+    font-family: Plus Jakarta Sans;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .Footer .Down_Div .left .two_sec i {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .Footer .Down_Div .left .copyRight {
+    color: #fff;
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .Footer .Down_Div .right {
+    width: 30%;
+  }
+  .Footer .Down_Div .right img {
+    width: 100%;
+  }
+  .lower-lower-1{
+    display: flex;
+  }
+  .lower_Div-1{
+    margin-left: 5%;
+    margin-top: 2%;
+  }
+  

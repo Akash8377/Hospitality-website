@@ -28,7 +28,7 @@ const Courses = () => {
   }, []);
 
   return (
-    <>
+    <div className="courses-container">
       <div className="courses_overflow">
         <LinkSection />
         <div className="Contact-Us_Banner">
@@ -308,7 +308,7 @@ const Courses = () => {
         </div>
         <div className="pt-5"></div>
       </div>
-    </>
+    </div>
   );
 };
 

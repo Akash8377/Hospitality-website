@@ -14,6 +14,7 @@ const BookFullService = () => {
   
 
   return (
+    <div className="book-full-service-container">
     <div className="Book-An-Event Book-Full-Service">
       <Banner />
       {/* Contact Form */}
@@ -146,6 +147,7 @@ const BookFullService = () => {
         <div className="pt-5"></div>
       </div>
      
+    </div>
     </div>
 
     

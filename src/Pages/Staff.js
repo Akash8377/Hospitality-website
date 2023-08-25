@@ -11,7 +11,7 @@ const Staff = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <>
+    <div className="staff-container">
       <Banner />
       <TrainingCourse />
       <HeadingCont title={"Consultancy"} content={""} />
@@ -62,7 +62,7 @@ const Staff = () => {
 
       <Newsletter />
       <div className="pt-5"></div>
-    </>
+    </div>
   );
 };
 
