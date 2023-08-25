@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 // import { Freelancing } from "../Modals/Freelancing";
 // // import { useAppContext } from '@/context/appContext';
 import '../../Css/Navbar.css'
+import {AiOutlineMenu} from 'react-icons/ai'
+
 
 // import {
 
@@ -66,57 +68,77 @@ import '../../Css/Navbar.css'
 // }
 import React from 'react';
 import { FindWorkModal } from "../Modals/FindWorkModal";
+import { FindStaffModal } from "../Modals/FindStaffModal";
+import { BoardingModal } from "../Modals/BoardingModal";
+import { Freelancing } from "../Modals/Freelancing";
+import {MenuModal} from '../Modals/MenuModal';
+
 
 
 const Navbar = () => {
+  
   const [modalShow, setModalShow] = useState(false);
-  const [showOverlay, setShowOverlay] = useState(false); // State to control overlay visibility
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [menuShow, setMenuShow] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [openFree, setOpenFree] = useState(false);
 
   const openOverlay = () => {
     setShowOverlay(true);
   };
   return (
-    
-    
+
+
     <div className='main-navi'>
+      <FindWorkModal show={modalShow} onHide={() => setModalShow(false)} />
+      <MenuModal show={menuShow} onHide={()=>{setMenuShow(false)}}/>
+      <FindStaffModal show={showModal} onHide={() => setShowModal(false)} />
+      <BoardingModal show={openModal} onHide={() => setOpenModal(false)} />
+      <Freelancing show={openFree} onHide={() => setOpenFree(false)} />
       <div className='logo-container-main-navi'>
+        <Link to="/">
         <img src="./Image/9.png" alt="" />
+        </Link>
       </div>
+      <button className='nav-button' onClick={() => setMenuShow(true)}><AiOutlineMenu className='ai-logo-menu'/></button>
       <div>
-      <Link to="/">
+
         <button className='nav-button' onClick={() => setModalShow(true)}>
           <div>
-          <img src="./Image/108.png" alt="" />
+            <img src="./Image/108.png" alt="" />
           </div>
           <div>
-          Find Work
+            Find Work
           </div>
         </button>
-      </Link>
+
       </div>
       <div>
-      
-        <button className='nav-button' onClick={openOverlay}>
+
+        <button className='nav-button' onClick={() => setShowModal(true)}>
+          {" "}
           <img src="./Image/110.png" alt="" />
           Find Talented
         </button>
-      
+
       </div>
       <div>
-      <Link to="/">
-        <button className='nav-button' onClick={openOverlay}>
+
+        <button className='nav-button' onClick={() => setOpenFree(true)}>
           <img src="./Image/109.png" alt="" />
           Freelancing
         </button>
-      </Link>
+
       </div>
       <div>
-      <Link to="/">
-        <button className='nav-button' onClick={openOverlay}>
+
+        <button className='nav-button' onClick={() => setOpenModal(true)}>
+          {" "}
           <img src="./Image/111.png" alt="" />
-          School For<br/> Bartending
+          School For<br /> Bartending
         </button>
-      </Link>
+
       </div>
     </div>
   );

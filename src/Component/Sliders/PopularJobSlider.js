@@ -7,10 +7,14 @@ import "slick-carousel/slick/slick-theme.css";
 import { EventModal } from "../Modals/event-modal";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import './PopolarJobs.css';
 
 
 const PopularJobSlider = () => {
   const [slidesToShow, setSlidesToShow] = useState(4);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const [modalShow, setModalShow] = useState(false);
   const [img, setImg] = useState(null);
   const [head, setHead] = useState(null);
@@ -67,12 +71,13 @@ const PopularJobSlider = () => {
     slidesToShow: slidesToShow,
     slidesToScroll: 2,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 1000,
   };
 
   return (
     <>
-      <EventModal
+    
+    <EventModal
         show={modalShow}
         onHide={() => setModalShow(false)}
         img={img}
@@ -80,274 +85,45 @@ const PopularJobSlider = () => {
         desc={description}
         descPoints={descPoints}
       />
-
-      <div className="Service_Slider_Container Popular_Job_Slider">
-        <Slider {...settings} ref={sliderRef} className="Service_Slider">
-          {
-            who?.map((ele,i)=>(
-              <>
-                <div className="Main hover">
-                  <img src={ele?.mainImage} alt="" />
-                  <p className="head hideOnHover">{ele?.title}</p>
-                  <p className="desc hideOnHover">Earn upto {ele?.earnUpto} {ele?.currency} per {ele?.per}</p>
-
-                  <motion.div
-                    className="content-div"
-                    initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-                    whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-                    whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-                    whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <p className="head">{ele?.title}</p>
-                    <p className="desc">
-                      {ele?.desc}
-                    </p>
-                    <button onClick={() => ModalOpen(ele?.image, ele?.title, ele?.desc, ele?.descPoints)}>
-                      FIND OUT MORE{" "}
-                    </button>
-                  </motion.div>
-                </div>
-              </>
-            ))
-          }
-          {/* <div className="Main hover">
-            <img src="./Image/61.png" alt="" />
-            <p className="head hideOnHover">Head Chefs</p>
-            <p className="desc hideOnHover">Earn upto 12 - 15 £ per hour</p>
-
-            <motion.div
-              className="content-div"
-              initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-              whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="head">Head Chefs</p>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget mollis velit. Praesent pharetra, ipsum eget vestibulum
-                eleifend, est sapien mollis erat, faucibus rhoncus purus tellus
-                eget odio. Nam dapibus magna a neque luctus auctor quis quis
-                diam. Donec viverra laoreet massa quis consectetur.
-              </p>
-              <button onClick={() => ModalOpen("52", "Head Chefs")}>
-                FIND OUT MORE{" "}
-              </button>
-            </motion.div>
-          </div>
-          <div className="Main hover">
-            <img src="./Image/59.png" alt="" />
-            <p className="head hideOnHover">Head Chefs</p>
-            <p className="desc hideOnHover">Earn upto 15 - 20 £ per hour</p>
-
-            <motion.div
-              className="content-div"
-              initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-              whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="head">Head Chef</p>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget mollis velit. Praesent pharetra, ipsum eget vestibulum
-                eleifend, est sapien mollis erat, faucibus rhoncus purus tellus
-                eget odio. Nam dapibus magna a neque luctus auctor quis quis
-                diam. Donec viverra laoreet massa quis consectetur.
-              </p>
-              <button onClick={() => ModalOpen("52", "Head Chefs")}>
-                FIND OUT MORE{" "}
-              </button>
-            </motion.div>
-          </div>
-          <div className="Main hover">
-            <img src="./Image/60.png" alt="" />
-            <p className="head hideOnHover">Bartender</p>
-            <p className="desc hideOnHover">Earn upto 20 - 25 £ per hour</p>
-            <motion.div
-              className="content-div"
-              initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-              whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="head">Bartender</p>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget mollis velit. Praesent pharetra, ipsum eget vestibulum
-                eleifend, est sapien mollis erat, faucibus rhoncus purus tellus
-                eget odio. Nam dapibus magna a neque luctus auctor quis quis
-                diam. Donec viverra laoreet massa quis consectetur.
-              </p>
-              <button onClick={() => ModalOpen("100", "Bartender")}>
-                FIND OUT MORE{" "}
-              </button>
-            </motion.div>
-          </div>
-
-          <div className="Main hover">
-            <img src="./Image/61.png" alt="" />
-            <p className="head hideOnHover">Head Chefs</p>
-            <p className="desc hideOnHover">Earn upto 12 - 15 £ per hour</p>
-
-            <motion.div
-              className="content-div"
-              initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-              whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="head">Head Chefs</p>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget mollis velit. Praesent pharetra, ipsum eget vestibulum
-                eleifend, est sapien mollis erat, faucibus rhoncus purus tellus
-                eget odio. Nam dapibus magna a neque luctus auctor quis quis
-                diam. Donec viverra laoreet massa quis consectetur.
-              </p>
-              <button onClick={() => ModalOpen("52", "Head Chefs")}>
-                FIND OUT MORE{" "}
-              </button>
-            </motion.div>
-          </div>
-
-          <div className="Main hover">
-            <img src="./Image/59.png" alt="" />
-            <p className="head hideOnHover">Head Chefs</p>
-            <p className="desc hideOnHover">Earn upto 15 - 20 £ per hour</p>
-
-            <motion.div
-              className="content-div"
-              initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-              whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="head">Head Chef</p>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget mollis velit. Praesent pharetra, ipsum eget vestibulum
-                eleifend, est sapien mollis erat, faucibus rhoncus purus tellus
-                eget odio. Nam dapibus magna a neque luctus auctor quis quis
-                diam. Donec viverra laoreet massa quis consectetur.
-              </p>
-              <button onClick={() => ModalOpen("52", "Head Chefs")}>
-                FIND OUT MORE{" "}
-              </button>
-            </motion.div>
-          </div>
-          <div className="Main hover">
-            <img src="./Image/60.png" alt="" />
-            <p className="head hideOnHover">Bartender</p>
-            <p className="desc hideOnHover">Earn upto 20 - 25 £ per hour</p>
-            <motion.div
-              className="content-div"
-              initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-              whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="head">Bartender</p>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget mollis velit. Praesent pharetra, ipsum eget vestibulum
-                eleifend, est sapien mollis erat, faucibus rhoncus purus tellus
-                eget odio. Nam dapibus magna a neque luctus auctor quis quis
-                diam. Donec viverra laoreet massa quis consectetur.
-              </p>
-              <button onClick={() => ModalOpen("100", "Bartender")}>
-                FIND OUT MORE{" "}
-              </button>
-            </motion.div>
-          </div>
-
-          <div className="Main hover">
-            <img src="./Image/61.png" alt="" />
-            <p className="head hideOnHover">Bartender</p>
-            <p className="desc hideOnHover">Earn upto 12 - 15 £ per hour</p>
-
-            <motion.div
-              className="content-div"
-              initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-              whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="head">Bartender</p>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget mollis velit. Praesent pharetra, ipsum eget vestibulum
-                eleifend, est sapien mollis erat, faucibus rhoncus purus tellus
-                eget odio. Nam dapibus magna a neque luctus auctor quis quis
-                diam. Donec viverra laoreet massa quis consectetur.
-              </p>
-              <button onClick={() => ModalOpen("100", "Bartender")}>
-                FIND OUT MORE{" "}
-              </button>
-            </motion.div>
-          </div>
-
-          <div className="Main hover">
-            <img src="./Image/59.png" alt="" />
-            <p className="head hideOnHover">Head Chefs</p>
-            <p className="desc hideOnHover">Earn upto 15 - 20 £ per hour</p>
-
-            <motion.div
-              className="content-div"
-              initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-              whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="head">Head Chef</p>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget mollis velit. Praesent pharetra, ipsum eget vestibulum
-                eleifend, est sapien mollis erat, faucibus rhoncus purus tellus
-                eget odio. Nam dapibus magna a neque luctus auctor quis quis
-                diam. Donec viverra laoreet massa quis consectetur.
-              </p>
-              <button onClick={() => ModalOpen("52", "Head Chefs")}>
-                FIND OUT MORE{" "}
-              </button>
-            </motion.div>
-          </div>
-          <div className="Main hover">
-            <img src="./Image/60.png" alt="" />
-            <p className="head hideOnHover">Bartender</p>
-            <p className="desc hideOnHover">Earn upto 20 - 25 £ per hour</p>
-            <motion.div
-              className="content-div"
-              initial={{ opacity: 0, scale: 0.7, rotate: 180 }}
-              whileHover={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileFocus={{ opacity: 1, scale: 1, rotate: 360 }}
-              whileTap={{ opacity: 0.8, scale: 0.9, rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="head">Bartender</p>
-              <p className="desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                eget mollis velit. Praesent pharetra, ipsum eget vestibulum
-                eleifend, est sapien mollis erat, faucibus rhoncus purus tellus
-                eget odio. Nam dapibus magna a neque luctus auctor quis quis
-                diam. Donec viverra laoreet massa quis consectetur.
-              </p>
-              <button onClick={() => ModalOpen("100", "Bartender")}>
-                FIND OUT MORE{" "}
-              </button>
-            </motion.div>
-          </div> */}
-        </Slider>
+    <div className="carousel-container">
+    <Carousel
+      autoPlay={true}
+      infiniteLoop={true}
+      showArrows={true}
+      showStatus={false}
+      showThumbs={false}
+      showIndicators={false}
+      interval={1500} // Adjust the interval between slides (in milliseconds)
+    >
+      {/* Slide */}
+      <div className="slide-container">
+        <div className="image-container">
+        <img src="./Image/115.png" alt="" />
+        </div>
+        <div className="image-container">
+        <img src="./Image/116.png" alt="" />
+        </div>
+        <div className="image-container">
+        <img src="./Image/117.png" alt="" />
+        </div>
       </div>
+
+      {/* Slide */}
+      <div className="slide-container">
+      <div className="image-container">
+        <img src="./Image/117.png" alt="" />
+        </div>
+        <div className="image-container">
+          <img src="./Image/115.png"  alt=""/>
+        </div>
+        <div className="image-container">
+        <img src="./Image/116.png" alt="" />
+        </div>
+      </div>
+    </Carousel>
+  </div>
+     
+      <div><button className="popularjobs-main">Opening</button></div>
     </>
   );
 };

@@ -5,66 +5,63 @@ import React from "react";
 const IndexBuisnessBanner = () => {
   return (
     <div className="Index_Buisness_Banner">
+      <div className="right-1">
+        <img src="./Image/130.png" alt="" width="550" height="550" />
+      </div>
       <div className="left">
-        <h5>Business We Support</h5>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-        </p>
+        <div >
+      <button className="button-index-business-banner">Get Job</button>
+      </div>
+        <h5>
+          Business We Support
+        </h5>
         <div className="Two_Sec">
           <div className="Main">
-            <img src="./Image/8.png" alt="" />
+            <img src="./Image/125 (2).png" alt="" />
             <div>
-              <h6>Spotify</h6>
-              <p>2 Vacancy</p>
+              <h6>Robin Sharma</h6>
             </div>
           </div>
 
           <div className="Main">
-            <img src="./Image/53.png" alt="" />
+            <img src="./Image/125 (1).png" alt="" />
             <div>
-              <h6>Facebook</h6>
-              <p>2 Vacancy</p>
+              <h6>National Gallery<br/>Museum</h6>
             </div>
           </div>
           <div className="Main">
-            <img src="./Image/54.png" alt="" />
+            <img src="./Image/126.png" alt="" />
             <div>
-              <h6>Google</h6>
-              <p>10 Vacancy</p>
-            </div>
-          </div>
-
-          <div className="Main">
-            <img src="./Image/55.png" alt="" />
-            <div>
-              <h6>Android</h6>
-              <p>20 Vacancy</p>
-            </div>
-          </div>
-          <div className="Main">
-            <img src="./Image/56.png" alt="" />
-            <div>
-              <h6>Lenovo</h6>
-              <p>12 Vacancy</p>
+              <h6>Science Museum</h6>
             </div>
           </div>
 
           <div className="Main">
-            <img src="./Image/57.png" alt="" />
+            <img src="./Image/127.png" alt="" />
             <div>
-              <h6>Linkedin</h6>
-              <p>5 Vacancy</p>
+              <h6>Somerset House</h6>
+              
+            </div>
+          </div>
+          <div className="Main">
+            <img src="./Image/128.png" alt="" />
+            <div>
+              <h6>Tower of London</h6>
+            </div>
+          </div>
+
+          <div className="Main">
+            <img src="./Image/129.png" alt="" />
+            <div>
+              <h6>British Museum</h6>
             </div>
           </div>
         </div>
         <p className="Last_Text">
-        See More Companies <i className="fa-solid fa-arrow-right"></i>
+        View All <i className="fa-solid fa-arrow-right"></i>
         </p>
       </div>
-      <div className="right">
-        <img src="./Image/7.png" alt="" />
-      </div>
+      
     </div>
   );
 };

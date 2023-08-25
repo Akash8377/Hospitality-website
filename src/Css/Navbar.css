@@ -86,6 +86,20 @@ main{
   opacity: 1.7;
   
 }
+.ai-logo-menu{
+  margin-right:77%;
+  margin-top: 20px;
+  height:50px;
+  width:50px;
+  background: none;
+  border: none;
+
+}
+.ai-logo-menu-1{
+  background: none;
+  border: none;
+  color: white;
+}
 .nav-button{
   color:white;
   background-color: rgba(0, 0, 0, 0.8);
@@ -96,6 +110,13 @@ main{
   cursor: pointer;
   row-gap: 30px;
   display: flex;
+  font-family: Nunito;
+font-size: 24px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+
 }
 .overlay {
   position: fixed;

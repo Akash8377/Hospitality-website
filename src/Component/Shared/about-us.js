@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { AiOutlineArrowRight } from 'react-icons/ai'
+import './about-use.css'
 
 const AboutUs = () => {
   const [who, setWho] = useState([]);
@@ -21,76 +23,49 @@ const AboutUs = () => {
     getWho();
   }, []);
   return (
-    <div className="About_Us">
-      <div className="Three_Div">
-        {
-          who?.map((ele,i)=>(
-            <>
-              <div className="Item">
-                <div className="upper">
-                  <img className="upperImage" src={ele?.image} alt="" />
-                  <p className="head">
-                    {ele?.type}
-                    {/* Join Our <br /> Community */}
-                  </p>
-                </div>
-                <p className="desc">
-                  {ele?.title}
-                </p>
+    <div>
+    
+    
+    <div className="box-container">
+      
+      <div className="shadow-box">
+        <div className="main-heading-write-1-1">Join Our Community</div>
+        <p className="text-paragraph">Lorem ipsum dolor sit amet, consectetur<br /> adipiscing elit, sed do eiusmod tempor <br />incididunt ut labore et dolore magna aliqua.<br /> Ut enim ad minim veniam</p>
+        <button className="learn-more-btn">
 
-                <Link to={`/community/${ele?._id}`}>
-                  <button>Learn More</button>
-                </Link>
-              </div>        
-            </>
-          ))
-        }
-        {/* <div className="Item">
-          <div className="upper">
-            <img className="upperImage" src="./Image/2.png" alt="" />
-            <p className="head">
-              Join Our <br /> Community
-            </p>
+          <div>
+            Learn More
           </div>
-          <p className="desc">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          </p>
-
-          <Link to="/community">
-            <button>Learn More</button>
-          </Link>
+          <div>
+            <AiOutlineArrowRight />
+          </div>
+        </button>
+        <div className="first-container-pic">
+          <img src="./Image/113.png" alt="" />
         </div>
-
-        <div className="Item">
-          <div className="upper second">
-            <img className="upperImage" src="./Image/31.png" alt="" />
-            <p className="head">
-              Client <br /> Relationship
-            </p>
-          </div>
-          <p className="desc">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          </p>
-          <Link to="/community">
-            <button>Learn More</button>
-          </Link>
-        </div>
-        <div className="Item">
-          <div className="upper third">
-            <img className="upperImage" src="./Image/32.png" alt="" />
-            <p className="head">Academy Bartending School</p>
-          </div>
-          <p className="desc">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-          </p>
-          <Link to="/community">
-            <button>Learn More</button>
-          </Link>
-        </div> */}
       </div>
+      <div className="shadow-box">
+        <div className="shadow-box-1">
+        <img src="./Image/112.png" alt="" />
+        </div>
+        <div className="">
+          <div className="second-container-pic">
+            <div className="main-heading-write-1-1">Client Relationship</div>
+            <p className="text-paragraph">Lorem ipsum dolor sit amet, consectetur<br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.<br />  Ut enim ad minim veniam</p>
+          </div>
+        </div>
+      </div>
+      <div className="shadow-box">
+        <div>
+          <div className="main-heading-write-1-1">Academy Bartending School</div>
+          <p className="text-paragraph">Lorem ipsum dolor sit amet, consectetur<br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.<br />  Ut enim ad minim veniam</p>
+        </div>
+        <div className="third-container-pic">
+          <img src="./Image/114.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div><button className="popularjobs-main">Opening</button></div>
     </div>
   );
 };

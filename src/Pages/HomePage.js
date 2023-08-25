@@ -10,6 +10,7 @@ import IndexBanner from "../Component/Partial/index-banner";
 import IndexBuisnessBanner from "../Component/Partial/index-buisness-banner";
 import LinkSection from "../Component/Partial/LinkSection";
 import PopularJobSlider from "../Component/Sliders/PopularJobSlider";
+import StaffReview from '../Component/Sliders/StaffReview'
 
 
 const HomePage = () => {
@@ -25,40 +26,27 @@ const HomePage = () => {
       <div className="bannerUnder">
       <HeadingCont
         title={"Who we Are?"}
-        content={
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
-        }
+       
       />
       <AboutUs />
       <HeadingCont
         title={"Popular Jobs"}
-        content={
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
-        }
       />
       <PopularJobSlider />
       <HeadingCont
         title={"Trending Services"}
-        content={
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
-        }
+        
       />
       <ServiceSlider />
       <HeadingCont
         title={" Client Reviews"}
-        content={
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
-        }
       />
       <ReviewSlider />
       <div className="mt-5"></div>
       <HeadingCont
         title={"Staff Reviews"}
-        content={
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed"
-        }
       />
-      <ReviewSlider />
+      <StaffReview />
       <IndexBanner />
       <IndexBuisnessBanner />
       <div className="mt-5"></div>

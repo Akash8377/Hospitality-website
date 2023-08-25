@@ -1571,7 +1571,7 @@
 .Link_Section {
   position: fixed;
   top: 185%;
-  left: 146%;
+  left: 116%;
   transform: translate(-50%, -50%);
   display: flex;
   gap: 50px;

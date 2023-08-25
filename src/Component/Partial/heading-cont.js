@@ -2,6 +2,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import './index-banner.css'
 
 const HeadingCont = ({ title, content }) => {
   return (
