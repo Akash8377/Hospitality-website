@@ -28,7 +28,7 @@ const Banner = () => {
             <br />
             we have helped recruit excellent applicants over the years.
           </p>
-          <div className="two_button">
+          {/* <div className="two_button">
             <button onClick={() => setModalShow(true)}>
               {" "}
               <img src="./Image/1.svg" alt="" /> Find Work
@@ -44,12 +44,12 @@ const Banner = () => {
               {" "}
               <img src="./Image/1.svg" alt="" /> Freelancing
             </button>
-          </div>
+          </div> */}
 
-          <button className="Bottom_Button" onClick={() => setOpenModal(true)}>
+          {/* <button className="Bottom_Button" onClick={() => setOpenModal(true)}>
             {" "}
             <img src="./Image/1.svg" alt="" /> School for Bartending...JOIN NOW
-          </button>
+          </button> */}
         </div>
       </div>
     </>
