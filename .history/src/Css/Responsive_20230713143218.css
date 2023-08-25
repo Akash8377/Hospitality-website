@@ -1,0 +1,20 @@
+/** @format */
+
+@media screen and (min-width: 1000px) and (max-width: 1450px) {
+  .Index_Banner_Two_Sec {
+    max-width: 1200px;
+  }
+  .Index_Buisness_Banner {
+    justify-content: space-between;
+  }
+  .Banner{
+    min-height: 500px;
+    max-height: 600px;
+  }
+  .About-Us_Newsletter .right .content .NewsLetter_Button  {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 980px) {
+}

@@ -1,0 +1,38 @@
+/** @format */
+
+.Navbar {
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.25);
+  background-color: #033c59;
+  padding: 20px;
+}
+.Navbar .main {
+  width: 15%;
+}
+.Navbar .main a {
+  text-decoration: none;
+  color: #fff;
+}
+.Navbar .main p {
+  font-size: 20px;
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+.Navbar .main img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+.Navbar .main div {
+  background-color: #fff;
+  max-width: 80%;
+  display: block;
+}
+.Navbar .main div input {
+  border: none;
+  background-color: transparent;
+}

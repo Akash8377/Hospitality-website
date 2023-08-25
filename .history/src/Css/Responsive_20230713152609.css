@@ -1,0 +1,121 @@
+/** @format */
+
+@media screen and (min-width: 1000px) and (max-width: 1450px) {
+  .Index_Banner_Two_Sec {
+    max-width: 1200px;
+  }
+  .Index_Buisness_Banner {
+    justify-content: space-between;
+  }
+  .Banner {
+    min-height: 500px;
+    max-height: 600px;
+  }
+  .About-Us_Newsletter .right .content .NewsLetter_Button {
+    width: 70%;
+  }
+  .About-Us_Newsletter .right .content .Whatsapp_Button {
+    width: 70%;
+  }
+  .About-Us_Newsletter .right .content .contact_Detail {
+    padding-bottom: 10px;
+  }
+  .Contact-Us_Banner {
+    min-height: 500px;
+    max-height: 600px;
+  }
+  .Contact-Us_Banner .content {
+    top: 40%;
+  }
+  .contact-us-overflow-main .Content .icon-div .left .container {
+    width: 80%;
+  }
+  .contact-query-form form .submit-btn {
+    width: 50%;
+  }
+  .contact-query-form form .Whatsapp_Button {
+    width: 50%;
+  }
+  .Find-Work-Banner .down .main .content {
+    max-width: 1200px;
+  }
+  .Find_work_contact_form {
+    max-width: 1200px;
+  }
+  .Find_work_contact_form
+    .right_container
+    .contact-query-form
+    form
+    .Whatsapp_Button {
+    width: 80%;
+  }
+  .Find_work_contact_form
+    .right_container
+    .contact-query-form
+    form
+    .submit-btn {
+    width: 80%;
+  }
+  .Event_Booking-Banner .upper {
+    max-height: 400px;
+  }
+  .Staff_Desc {
+    max-width: 1200px;
+  }
+  .courses_overflow .Contact-Us_Banner {
+    min-height: 400px;
+    max-height: 500px;
+  }
+  .contact-us-overflow-main .Content .Main .search {
+    width: 50%;
+  }
+  .permanent-job .Register_Div {
+    max-width: 1200px;
+  }
+  .casual-staff .Find_work_contact_form .right_container {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 780px) and (max-width: 1000px) {
+  .Navbar {
+    justify-content: space-between;
+  }
+  .Hide_On_Tab {
+    display: none;
+  }
+
+  .Navbar .main .fa-bars {
+    display: block;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .Tab_Burger {
+    width: 25% !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .Banner {
+    min-height: 400px;
+    max-height: 700px;
+  }
+  .Banner h2 {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .Banner .content .two_button button {
+    width: 45%  !important;
+    font-size: 20px;
+    height: 60px;
+  }
+  .Banner .content .Bottom_Button {
+    height: 60px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 980px) {
+}

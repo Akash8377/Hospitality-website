@@ -1,0 +1,52 @@
+/** @format */
+
+.Banner {
+  min-height: 550px;
+  max-height: 600px;
+  width: 100%;
+  background-image: url("../../public/Image/1.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Banner h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 60px;
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90px;
+}
+.Banner p {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-size: 17px;
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.Banner .two_button {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.Banner .two_button button {
+  border-radius: 10px;
+  background: #033c59;
+  border: 1px solid #033c59;
+  box-shadow: 0px 0px 3px 0px rgba(60, 72, 88, 0.15);
+  width: 400px;
+  color: #fff;
+  padding: 10px;
+  color: #fff;
+  font-size: 28px;
+  font-family: Plus Jakarta Sans;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+.Banner 

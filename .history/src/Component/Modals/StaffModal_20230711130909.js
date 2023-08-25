@@ -1,0 +1,26 @@
+/** @format */
+
+import { Modal } from "react-bootstrap";
+
+export function StaffModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="xl"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Body className="Chef_Modal">
+        <i className="fa-solid fa-xmark" onClick={() => props.onHide()}></i>
+        <div className="container">
+            <div className="left">
+                <img src='./Image/52.png' alt='' />
+            </div>
+            <div className="right">
+                <h5>Head-Chef</h5>
+            </div>
+        </div>
+      </Modal.Body>
+    </Modal>
+  );
+}

@@ -1,0 +1,6 @@
+.Navbar{
+    display: flex;
+    justify-content: space-evenly;
+
+    background-color: 033C59;
+}

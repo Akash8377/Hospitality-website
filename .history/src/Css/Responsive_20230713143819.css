@@ -1,0 +1,36 @@
+/** @format */
+
+@media screen and (min-width: 1000px) and (max-width: 1450px) {
+  .Index_Banner_Two_Sec {
+    max-width: 1200px;
+  }
+  .Index_Buisness_Banner {
+    justify-content: space-between;
+  }
+  .Banner{
+    min-height: 500px;
+    max-height: 600px;
+  }
+  .About-Us_Newsletter .right .content .NewsLetter_Button  {
+    width: 70%;
+  }
+  .About-Us_Newsletter .right .content .Whatsapp_Button {
+    width: 70%;
+  }
+  .About-Us_Newsletter .right .content .contact_Detail {
+    padding-bottom: 10px;
+  }
+  .Contact-Us_Banner {
+    min-height: 500px;
+    max-height: 600px;
+  }
+  .Contact-Us_Banner .content {
+    top: 40%;
+  }
+  .contact-us-overflow-main .Content .office_images .container {
+    border: 1px solid black;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 980px) {
+}

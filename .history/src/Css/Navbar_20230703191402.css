@@ -1,0 +1,7 @@
+/** @format */
+
+.Navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #033c59;
+}
